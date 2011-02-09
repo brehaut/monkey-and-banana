@@ -4,9 +4,11 @@
 (ns monkey-and-banana.one
   (:require [clojure.set :as set]))
 
-(defrecord State [monkey onbox box banana])
-
-(def start (State. :door false :window false))
+(def ^{:doc "The initial state of the program. This record introduces the 4 basic
+             components of the world: the monkeys position, whether the monkey is
+             standing on the box, the box's position, and whether the monkey
+             has the banana."}
+  start {:monkey :door :onbox false :box :window :banana false})
 
 (def ^{:doc "All the valid room locations"}
   room-locations #{:door :middle :window})

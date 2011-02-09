@@ -38,21 +38,21 @@
 (with-monad nondeterministic-m
   (defn grasp
     "The monkey can grasp the banana only when the box is in the middle of the room
-   and the monkey is standing on the box."
+     and the monkey is standing on the box."
     [{:keys [monkey onbox box] :as state} ]
     (domonad [:when (and (= monkey :middle) (= box :middle) onbox)]
              (assoc state :banana true)))
 
   (defn climb
     "The monkey can only climb on the box when it is in the same location as the
-   box and it is currently on the floor"
+     box and it is currently on the floor"
     [{:keys [monkey onbox box] :as state}]
     (domonad [:when (and (= monkey box) (not onbox))]
              (assoc state :onbox true)))
 
   (defn walk
     "The monkey can walk to any other location in the room as long as it is not
-   currently on the box."
+     currently on the box."
     [{:keys [monkey onbox] :as state}]
     (if onbox m-zero
         (m-map-lift #(assoc state :monkey %)
@@ -60,7 +60,7 @@
 
   (defn push
     "The moneky can push the box when it is not standing on the box, and it is
-   currently standing in the same location as the box."
+     currently standing in the same location as the box."
     [{:keys [monkey onbox box] :as state}]
     (if (or onbox (not= monkey box)) m-zero
         (m-map-lift #(assoc state :monkey % :box %)

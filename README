@@ -1,13 +1,24 @@
 # monkey-and-banana
 
-FIXME: write description
+This project contains some variations on the classic [Monkey and Banana
+problem](http://en.wikipedia.org/wiki/Monkey_and_banana_problem). I
+have based my solution on the text and sample provided on pg 46 of
+Ivan Bratko's *PROLOG Programming for Artifical Intelligence*. This
+project is meant to accompany a blog post. Each variation of the
+program transitions further from the raw functional solution toward a
+logical one.
+
+If you have not attempted to solve this problem in your language of
+choice, I would recommend doing so.
 
 ## Usage
 
-FIXME: write
+load the various modules up in your repl and explore them. If you just
+want to read the code, check the documentation produced by marginalia
+in `docs/`.
 
 ## License
 
-Copyright (C) 2010 FIXME
+Copyright (C) 2011 Andrew Brehaut.
 
 Distributed under the Eclipse Public License, the same as Clojure.
