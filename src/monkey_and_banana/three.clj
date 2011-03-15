@@ -6,7 +6,7 @@
 (ns monkey-and-banana.three
   (require [clojure.set :as set])
   (use clojure.contrib.monads
-       [me.fogus.unifycle :only [unifier]]))
+       [me.fogus.unifycle :only [unify]]))
 
 
 (def nondeterministic-m (state-t set-m))
@@ -49,7 +49,7 @@
 
 ;; Implementation:
 
-(def start {:door false :window false})
+(def start [:door false :window false])
 
 (def ^{:doc "All the valid room locations"}
   room-locations #{:door :middle :window})
