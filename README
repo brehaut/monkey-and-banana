@@ -17,6 +17,10 @@ load the various modules up in your repl and explore them. If you just
 want to read the code, check the documentation produced by marginalia
 in `docs/`.
 
+## See Also
+
+ * David Nolen has a [solution implemented](https://github.com/swannodette/bratko-logos/blob/master/src/bratko_logos/monkey_banana.clj) in his [miniKanren implementation](https://github.com/swannodette/logos/).
+
 ## License
 
 Copyright (C) 2011 Andrew Brehaut.
